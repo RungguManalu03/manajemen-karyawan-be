@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "2bd9856f-4e0e-4df5-aded-81181f3d54c5",
+		"name": "technical-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23127196",
+		"_collection_link": "https://universal-crescent-209893.postman.co/workspace/New-Team-Workspace~f8466248-7f28-4d97-a1aa-ec1d03e0a244/collection/23127196-2bd9856f-4e0e-4df5-aded-81181f3d54c5?action=share&source=collection_link&creator=23127196"
+	},
+	"item": [
+		{
+			"name": "API-GET-File",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/upload/foto/foto-1723274254619-727672522.png"
+			},
+			"response": []
+		},
+		{
+			"name": "API-GET-FindAll&SearchKaryawan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/karyawan/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "API-GET-FindKaryawanByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/karyawan/api/v1/a44ae44a-9c66-4967-923a-9f063aee3759"
+			},
+			"response": []
+		},
+		{
+			"name": "API-GET-Export-Karyawan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/karyawan/export/api/v1"
+			},
+			"response": [
+				{
+					"name": "API-GET-Export-Karyawan",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/karyawan/export/api/v1"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Disposition",
+							"value": "attachment; filename=\"karyawan_export_1723283521643.csv\""
+						},
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, max-age=0"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Sat, 10 Aug 2024 09:52:01 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ef-1913bb3c077\""
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/csv; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "239"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Aug 2024 09:52:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "nama,nomor,jabatan,departemen,tanggal_masuk,foto,status\nRunggu Marusaha Manalu,ID030301,STAFF,IT,2024-08-09,foto-1723274254619-727672522.png,KONTRAK\nAnnisa Hutagalung,ID010101,STAFF,HR,2024-08-10,foto-1723274544427-250761306.jpg,PROBATION\n"
+				}
+			]
+		},
+		{
+			"name": "API-GET-StatistikKaryawan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/karyawan/statistik/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "API-Post-CreateKaryawan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nama",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "nomor",
+							"value": "ID030301",
+							"type": "text"
+						},
+						{
+							"key": "jabatan",
+							"value": "MANAJER",
+							"type": "text"
+						},
+						{
+							"key": "departemen",
+							"value": "FINANCE",
+							"type": "text"
+						},
+						{
+							"key": "tanggal_masuk",
+							"value": "2024-08-09 21:40:45",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/Users/User/Downloads/test.png"
+						},
+						{
+							"key": "status",
+							"value": "TETAP",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/karyawan/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "API-POST-ImportKaryawan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/User/Downloads/data_karyawan.csv"
+						}
+					]
+				},
+				"url": "localhost:3000/karyawan/import/api/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "API-PUT-UpdateKaryawan",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nama",
+							"value": "Annisa Hutagalung",
+							"type": "text"
+						},
+						{
+							"key": "nomor",
+							"value": "ID010101",
+							"type": "text"
+						},
+						{
+							"key": "jabatan",
+							"value": "STAFF",
+							"type": "text"
+						},
+						{
+							"key": "departemen",
+							"value": "HR",
+							"type": "text"
+						},
+						{
+							"key": "tanggal_masuk",
+							"value": "2024-08-10 21:40:45",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "PROBATION",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/E:/folder foto/Camera/IMG20220829120018.jpg"
+						}
+					]
+				},
+				"url": "localhost:3000/karyawan/api/v1/faa4c41f-7d86-45eb-a557-006c68464375"
+			},
+			"response": []
+		},
+		{
+			"name": "API-DELETE-KaryawanByID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:3000/karyawan/api/v1/120e4fe8-f880-44db-bf3f-c9d77acdd27d"
+			},
+			"response": []
+		}
+	]
+}

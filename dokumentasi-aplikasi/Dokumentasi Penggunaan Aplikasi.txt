@@ -1,0 +1,20 @@
+Dokumentasi Aplikasi 
+(Backend)
+ Tools : 
+  -Nest JS
+  -Prisma
+  -Postgre Sql
+   Penggunaan
+    *Clone repo 
+    *Masuk ke storage backend
+    *pnpm install
+    *db sudah disediakan tinggal execute dan collection api postman sudah ada
+    *catatan (sudah menggunakan clean code dan untuk validasi pake class-validator)
+(Frontend)
+ Tools : 
+  -Vue JS
+  -Penggunaan 
+   *Clone repo
+   *Masuk ke storage frontend
+   *npm install
+   *catatan (frontend lebih mementingkan fungsi dan sudah menggunakan validasi manual untuk tiap inputanya)
